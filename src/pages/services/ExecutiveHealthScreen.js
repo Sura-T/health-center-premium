@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import executiveImage from '../../assets/images/executive-screening.png';
+import { useNavigate } from 'react-router-dom';
 
 const features = [
   { text: "Comprehensive Physical Examination", delay: 0.2 },
@@ -11,12 +12,14 @@ const features = [
 ];
 
 const ExecutiveHealthScreen = () => {
+  const navigate = useNavigate();
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="py-16 bg-gradient-to-b from-white to-blue-50"
+      className="py-16 pt-20 bg-gradient-to-b from-white to-blue-50"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
@@ -92,11 +95,12 @@ const ExecutiveHealthScreen = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
+                  onClick={() => navigate('/screening-appointment')}
+                  className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-semibold rounded-xl text-white bg-primary-600 hover:bg-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   Schedule Screening
                   <motion.svg
-                    className="ml-2 -mr-1 w-5 h-5"
+                    className="ml-2 h-5 w-5"
                     whileHover={{ x: 5 }}
                     fill="none"
                     viewBox="0 0 24 24"

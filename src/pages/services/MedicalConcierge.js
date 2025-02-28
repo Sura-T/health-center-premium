@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import conciergeImage from '../../assets/images/medical-concierge.png';
+import { useNavigate } from 'react-router-dom';
 
 const services = [
   { text: "24/7 Direct Physician Access", delay: 0.2 },
@@ -11,6 +12,8 @@ const services = [
 ];
 
 const MedicalConcierge = () => {
+  const navigate = useNavigate();
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -94,11 +97,12 @@ const MedicalConcierge = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
+                  onClick={() => navigate('/concierge-enrollment')}
+                  className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-semibold rounded-xl text-white bg-primary-600 hover:bg-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   Enroll Now
                   <motion.svg
-                    className="ml-2 -mr-1 w-5 h-5"
+                    className="ml-2 h-5 w-5"
                     whileHover={{ x: 5 }}
                     fill="none"
                     viewBox="0 0 24 24"
@@ -110,9 +114,19 @@ const MedicalConcierge = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center px-8 py-4 border-2 border-primary-600 text-lg font-medium rounded-md text-primary-600 hover:bg-primary-50 transition-colors duration-200"
+                  onClick={() => navigate('/services/private-medical-concierge#details')}
+                  className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-semibold rounded-xl text-primary-600 bg-primary-50 hover:bg-primary-100 transition-all duration-300 shadow-lg hover:shadow-xl ml-4"
                 >
                   Learn More
+                  <motion.svg
+                    className="ml-2 h-5 w-5"
+                    whileHover={{ x: 5 }}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </motion.svg>
                 </motion.button>
               </motion.div>
             </div>

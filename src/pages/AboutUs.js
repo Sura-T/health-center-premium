@@ -42,7 +42,7 @@ const AboutUs = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="min-h-screen bg-gradient-to-b from-white to-blue-50"
+      className="min-h-screen bg-gradient-to-b from-white to-blue-50 pt-0"
     >
       {/* Hero Section */}
       <div className="relative h-[600px] overflow-hidden">

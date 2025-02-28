@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import diagnosticsImage from '../../assets/images/advanced-diagnostics.png';
 import mriImage from '../../assets/images/mri-scanner.png';
 import labImage from '../../assets/images/laboratory.png';
@@ -14,6 +15,8 @@ const diagnosticServices = [
 ];
 
 const AdvancedDiagnostics = () => {
+  const navigate = useNavigate();
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -102,9 +105,19 @@ const AdvancedDiagnostics = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
+              onClick={() => navigate('/diagnostic-test')}
+              className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-semibold rounded-xl text-white bg-primary-600 hover:bg-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Schedule Diagnostic Test
+              <motion.svg
+                className="ml-2 h-5 w-5"
+                whileHover={{ x: 5 }}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </motion.svg>
             </motion.button>
           </motion.div>
         </div>

@@ -11,11 +11,18 @@ import LuxuryRecovery from './pages/services/LuxuryRecovery';
 import BookAppointment from './pages/BookAppointment';
 import BookConsultation from './pages/BookConsultation';
 import AboutUs from './pages/AboutUs';
+import ScrollToTop from './components/ScrollToTop';
+import Contact from './pages/Contact';
+import ScreeningAppointment from './pages/ScreeningAppointment';
+import ConciergeEnrollment from './pages/ConciergeEnrollment';
+import DiagnosticTest from './pages/DiagnosticTest';
+import SuiteBooking from './pages/SuiteBooking';
 import './index.css';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Layout>
         <Routes>
           <Route path="/" element={
@@ -34,6 +41,11 @@ function App() {
           <Route path="/book-appointment" element={<BookAppointment />} />
           <Route path="/book-consultation" element={<BookConsultation />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/screening-appointment" element={<ScreeningAppointment />} />
+          <Route path="/concierge-enrollment" element={<ConciergeEnrollment />} />
+          <Route path="/diagnostic-test" element={<DiagnosticTest />} />
+          <Route path="/suite-booking" element={<SuiteBooking />} />
         </Routes>
       </Layout>
     </Router>

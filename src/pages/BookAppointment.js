@@ -42,7 +42,7 @@ const BookAppointment = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="min-h-screen py-16 bg-gradient-to-b from-white to-blue-50"
+      className="min-h-screen py-16 pt-20 bg-gradient-to-b from-white to-blue-50"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
