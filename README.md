@@ -1,8 +1,26 @@
-# Getting Started with Create React App
+# Health Center Premium
 
 [Live Demo of the website](https://health-center-premium-zsk7.vercel.app/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
+
+Health Center Premium is a modern web application designed to manage health center operations efficiently. It provides a user-friendly interface for both patients and healthcare providers.
+
+## Built With
+
+- **React** - A JavaScript library for building user interfaces.
+- **Redux** - A predictable state container for JavaScript apps.
+- **React Router** - A collection of navigational components for React applications.
+- **Material-UI** - A popular React UI framework.
+- **Axios** - A promise-based HTTP client for the browser and Node.js.
+
+## Features
+
+- **User Authentication**: Secure login and registration for users.
+- **Appointment Management**: Schedule, view, and manage appointments.
+- **Patient Records**: Maintain and access patient medical records.
+- **Notifications**: Receive notifications for upcoming appointments and important updates.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
 
 ## Available Scripts
 
@@ -39,7 +57,7 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However, we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
 ## Learn More
 
